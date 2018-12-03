@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 1
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 4958800a1bcb7f74cb2367b15a10d089, type: 3}
+    - {fileID: 102900000, guid: 63a49af3c9ce9114bac847b2954adeaf, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: c5b0cf00024710a45a03eccc730d49b0, type: 3}
+  - {fileID: 21300000, guid: 94ee22bd87ea866439dca0e998faaa74, type: 3}
+  - {fileID: 21300000, guid: 898441a36a0ed3245a37b4e743291120, type: 3}
+  - {fileID: 21300000, guid: e7e0dde80feae034ba8c93166d35207b, type: 3}
+  - {fileID: 21300000, guid: 939bed6b85405da449ba39ab5359f766, type: 3}
+  - {fileID: 21300000, guid: 6e748e7ae592c324c8ea6a2656045c8f, type: 3}
+  - {fileID: 21300000, guid: fddcd4d3063c0a9468953820e44d7956, type: 3}
+  - {fileID: 21300000, guid: dcc80701aea634b478fd0fac701def8a, type: 3}
+  - {fileID: 21300000, guid: 1ca55f17f25c32f4e9aa31eac93c4e3c, type: 3}
+  - {fileID: 21300000, guid: 7d766d60612850a489fa4667064b21a2, type: 3}
+  - {fileID: 21300000, guid: 758f8ea96f93f42499a9a77f61ed0d9c, type: 3}
+  - {fileID: 21300000, guid: 074f89b01b4c36f43b6b1e7e330aea6d, type: 3}
+  - {fileID: 21300000, guid: bb956615f4fe8cf4b91469e32954d0c5, type: 3}
+  - {fileID: 21300000, guid: 03f346b53c1833840a3e1603925bd06f, type: 3}
+  - {fileID: 21300000, guid: 17df6f66a4d7b884eaaae66180a5445c, type: 3}
+  - {fileID: 21300000, guid: 77a74d47cc3e12346abaf8da872d8513, type: 3}
+  - {fileID: 21300000, guid: 0e9de9bcfdb7da846b621c9ecafdf3d6, type: 3}
+  - {fileID: 21300000, guid: 2700fd3d41760b342871ea5a0468e11a, type: 3}
+  - {fileID: 21300000, guid: 0bcae9c49e40cad469f005d53a9a2f2c, type: 3}
+  - {fileID: 21300000, guid: e3d19d91fba2e7d4e8446dc270602bf1, type: 3}
+  - {fileID: 21300000, guid: a628437d4cb15e446b280d54f4c3ad5f, type: 3}
+  - {fileID: 21300000, guid: 1763b77d7982c014ca6c8183ac466dd1, type: 3}
+  - {fileID: 21300000, guid: 12470de604eb47445b7a4a6cafd62e46, type: 3}
+  - {fileID: 21300000, guid: a38eae4027dece24d86609d58c9f9d40, type: 3}
+  - {fileID: 21300000, guid: 324cfab423928bb49a89484ced30f013, type: 3}
+  - {fileID: 21300000, guid: 50721a008b2da6d47abfa5cd851b5797, type: 3}
+  - {fileID: 21300000, guid: 2e6967b1078ac6840babcff8ff40487c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SymbolDiamond
+  - SymbolClub
+  - Tile_Grid
+  - SymbolChip
+  - SymbolHeart
+  - XPIconPurple
+  - TabActive
+  - TabInactive
+  - BTOrange
+  - BTGreen
+  - BTBlue1
+  - ButtonBack
+  - DarkBlueBoxGoldStroke
+  - BGPopupsA
+  - QuestsBox
+  - BGInput2
+  - QuestNodeHudPurple
+  - BTMenu
+  - ButtonOptions
+  - StoreRow
+  - PurpleBoxGoldStroke
+  - BlueBoxYellowStroke
+  - BGMenuSound
+  - CheckBoxOn
+  - CheckBoxOff
+  - IconBack
+  - CheckIcon
+  m_Tag: Sprites
+  m_IsVariant: 0
