@@ -11,5 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c676250ad16c2f48a2c2f6682b9383d, type: 3}
   m_Name: GameStateMachine
   m_EditorClassIdentifier: 
+  _splashScreenState: {fileID: 11400000, guid: 8e65978bd6843f641bac142d7babf633, type: 2}
+  _mainScreenState: {fileID: 11400000, guid: 5774e3cff86fcfd40b472effe791623c, type: 2}
+  _ticTacToeScreenState3x3: {fileID: 11400000, guid: cb45340cf3114824ea263b5fe3e7998f,
+    type: 2}
+  _ticTacToeScreenState4x4: {fileID: 11400000, guid: 21737db7349bccc438b6ac220101d62f,
+    type: 2}
   _rootState: {fileID: 11400000, guid: 8e65978bd6843f641bac142d7babf633, type: 2}
-  _isLoadRootAtStart: 0
+  _isLoadRootAtStart: 1

@@ -10,11 +10,11 @@ namespace WishfulDroplet {
 		[SerializeField] private SceneReference _mainScreenScene;
 
 
-		public override void OnEnter(IState prevState) {
+		public override void OnEnter(GameState prevState) {
 			SceneManager.LoadSceneAsync(_mainScreenScene.SceneName, LoadSceneMode.Single);
 		}
 
-		public override void OnExit(IState nextState) {
+		public override void OnExit(GameState nextState) {
 			//SceneManager.UnloadSceneAsync(_mainScreenScene.SceneName);
 		}
 	}

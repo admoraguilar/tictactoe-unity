@@ -10,11 +10,11 @@ public class TicTacToeScreen : GameState {
 	[SerializeField] private SceneReference _ticTacToeScene;
 
 
-	public override void OnEnter(IState prevState) {
+	public override void OnEnter(GameState prevState) {
 		SceneManager.LoadSceneAsync(_ticTacToeScene.SceneName, LoadSceneMode.Single);
 	}
 
-	public override void OnExit(IState nextState) {
+	public override void OnExit(GameState nextState) {
 		//SceneManager.UnloadSceneAsync(_ticTacToeScene.SceneName);
 	}
 }

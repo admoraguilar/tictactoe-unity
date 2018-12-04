@@ -1268,12 +1268,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: a73ba840d87559345870c9c7f25704dd, type: 2}
-        m_MethodName: SetState
-        m_Mode: 2
+        m_MethodName: TicTacToe3x3
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: cb45340cf3114824ea263b5fe3e7998f,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: WishfulDroplet.ScriptableState, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1548,12 +1547,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: a73ba840d87559345870c9c7f25704dd, type: 2}
-        m_MethodName: SetState
-        m_Mode: 2
+        m_MethodName: TicTacToe4x4
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 21737db7349bccc438b6ac220101d62f,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: WishfulDroplet.ScriptableState, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

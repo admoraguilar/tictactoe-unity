@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions;
 using TMPro;
+using WishfulDroplet;
 
 
 public class TicTacToeGame : MonoBehaviour {
@@ -14,13 +15,23 @@ public class TicTacToeGame : MonoBehaviour {
 	[Header("Data")]
 	[SerializeField] private Player[] _players;
 
-	[Header("References")]
-	[SerializeField] private Button _buttonPrefab;
+	[Header("Board References")]
 	[SerializeField] private RectTransform _buttonContainer;
+	[SerializeField] private Button _buttonPrefab;
+	
+	[Header("Win Overlay References")]
+	[SerializeField] private RectTransform _winOverlay;
+	[SerializeField] private TextMeshProUGUI _winText;
+	[SerializeField] private Button _playAgainButton;
 
 	[Header("Debug")]
 	[SerializeField] private Player _winnerPlayer;
 	[SerializeField] private int _currentPlayerIndex;
+
+	private StackStateMachine<TicTacToeGameState> _ticTacToeStateMachine = new StackStateMachine<TicTacToeGameState>();
+
+	private PlayState _playState = new PlayState();
+	private WinState _winState = new WinState();
 
 
 	private void EndCurrentPlayerTurn() {
@@ -38,10 +49,49 @@ public class TicTacToeGame : MonoBehaviour {
 
 		if(_ticTacToe.CheckIfWon(playerMarker)) {
 			_winnerPlayer = _players[playerMarker];
+			_winText.text = string.Format("{0} wins!", _winnerPlayer.name);
+			_ticTacToeStateMachine.SetState(_winState);
 			Debug.Log(string.Format("Player {0} won!", playerMarker.ToString()));
 		}
 
 		EndCurrentPlayerTurn();
+	}
+
+	private void ResetBoard() {
+		_ticTacToe.Reset();
+		_winnerPlayer = null;
+		
+		// Reset all button text contents 
+	}
+
+	private void OnEnterState(TicTacToeGameState toEnterState, TicTacToeGameState prevState) {
+		if(toEnterState == _playState) {
+			ResetBoard();
+		}
+
+		if(toEnterState == _winState) {
+			_winOverlay.gameObject.SetActive(true);
+		}
+	}
+
+	private void OnExitState(TicTacToeGameState toExitState, TicTacToeGameState nextState) {
+		if(toExitState == _playState) {
+			
+		}
+
+		if(toExitState == _winState) {
+			_winOverlay.gameObject.SetActive(false);
+		}
+	}
+
+	private void OnEnable() {
+		_ticTacToeStateMachine.OnEnter += OnEnterState;
+		_ticTacToeStateMachine.OnExit += OnExitState;
+	}
+
+	private void OnDisable() {
+		_ticTacToeStateMachine.OnEnter -= OnEnterState;
+		_ticTacToeStateMachine.OnExit -= OnExitState;
 	}
 
 	private void Start() {
@@ -59,7 +109,25 @@ public class TicTacToeGame : MonoBehaviour {
 			buttonRT.localPosition = Vector3.zero;
 			buttonRT.SetParent(_buttonContainer, false);
 		}
+
+		_playAgainButton.onClick.AddListener(() => {
+			_ticTacToeStateMachine.SetState(_playState);
+		});
+
+		_ticTacToeStateMachine.SetState(_playState);
+
+		_winOverlay.gameObject.SetActive(_ticTacToeStateMachine.currentState == _winState);
 	}
+
+	#region STATES
+
+	public class PlayState : TicTacToeGameState { }
+	public class WinState : TicTacToeGameState { }
+
+
+	public abstract class TicTacToeGameState { }
+
+	#endregion
 }
 
 
