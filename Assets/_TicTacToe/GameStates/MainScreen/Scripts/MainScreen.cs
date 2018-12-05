@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using WishfulDroplet;
 
 
-namespace WishfulDroplet {
+namespace FoxCubTicTacToe {
 	[CreateAssetMenu(fileName = "MainScreen", menuName = "TicTacToe/GameState/MainScreen")]
 	public class MainScreen : GameState {
 		[SerializeField] private SceneReference _mainScreenScene;

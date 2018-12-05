@@ -1,19 +1,24 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "WinCombinationData", menuName = "TicTacToe/Data/WinCombinationData")]
-public class TicTacToeWinCombinationData : ScriptableObject {
-	[SerializeField] private bool[] _combination;
-	[SerializeField] private int _boardSize;
+namespace FoxCubTicTacToe {
+	/// <summary>
+	/// Data that stores winning combinations for a TicTacToe game.
+	/// </summary>
+	[CreateAssetMenu(fileName = "WinCombinationData", menuName = "TicTacToe/Data/WinCombinationData")]
+	public class TicTacToeWinCombinationData : ScriptableObject {
+		[SerializeField] private bool[] _combination;
+		[SerializeField] private int _boardSize;
 
-	private HashSet<int> _combinationSet;
+		private HashSet<int> _combinationSet;
 
 
-	public HashSet<int> GetCombinationSet() {
-		if(_combinationSet == null) {
+		public HashSet<int> GetCombinationSet() {
+			return _combinationSet;
+		}
+
+		private void OnEnable() {
 			_combinationSet = new HashSet<int>();
 			for(int i = 0; i < _combination.Length; i++) {
 				if(_combination[i]) {
@@ -21,7 +26,5 @@ public class TicTacToeWinCombinationData : ScriptableObject {
 				}
 			}
 		}
-
-		return _combinationSet;
 	}
 }

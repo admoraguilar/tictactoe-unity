@@ -1,14 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "Player", menuName = "TicTacToe/Data/Player")]
-public class Player : ScriptableObject {
-	[SerializeField] private string _name;
+namespace FoxCubTicTacToe {
+	/// <summary>
+	/// Used for identifying players across the game.
+	/// </summary>
+	[CreateAssetMenu(fileName = "Player", menuName = "TicTacToe/Data/Player")]
+	public class Player : ScriptableObject {
+		[SerializeField] private string _name;
 
 
-	public new string name {
-		get { return _name; }
+		public new string name {
+			get { return _name; }
+		}
 	}
 }
