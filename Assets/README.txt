@@ -1,5 +1,12 @@
 ﻿FOX CUB GAMES DEV TEST - TIC TAC TOE
 
+
+Developer: Admor Aloysious Aguilar
+Email: admor.aguilar@gmail.com
+Site: https://www.wishfuldroplet.com/
+LinkedIn: https://www.linkedin.com/in/admoraguilar/
+
+
 NOTES:
 * This project is structured in a "package-based" way. For example for the scene called "MainScreen", everything that
   relates to that is contained in _TicTacToe/GameStates/MainScreen. For something that is shared across packages we
