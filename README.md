@@ -1,6 +1,6 @@
 # unity_tictactoe
 
-##FOX CUB GAMES DEV TEST - TIC TAC TOE
+## FOX CUB GAMES DEV TEST - TIC TAC TOE
 
 
 * Developer: Admor Aloysious Aguilar
@@ -9,7 +9,7 @@
 * LinkedIn: https://www.linkedin.com/in/admoraguilar/
 
 
-##Notes:
+## Notes:
 * This project is structured in a "package-based" way. For example for the scene called "MainScreen", everything that
   relates to that is contained in _TicTacToe/GameStates/MainScreen. For something that is shared across packages we
   put them in a folder one level above those packages called "_Common".
@@ -22,7 +22,7 @@
 * I also thank you for taking your valuable time to review this test.
 
 
-#Checklist
+# Checklist
 Tic Tac Toe is a simple game played by 2 players on a square grid of tiles:
 * ✓ Each player has a different symbol (traditionally X or O, but here we have custom symbol images).
    * In TicTacToeUI component we could specify "markers/symbols" for players.
