@@ -1,15 +1,15 @@
 # unity_tictactoe
 
-﻿FOX CUB GAMES DEV TEST - TIC TAC TOE
+##FOX CUB GAMES DEV TEST - TIC TAC TOE
 
 
-Developer: Admor Aloysious Aguilar
-Email: admor.aguilar@gmail.com
-Site: https://www.wishfuldroplet.com/
-LinkedIn: https://www.linkedin.com/in/admoraguilar/
+* Developer: Admor Aloysious Aguilar
+* Email: admor.aguilar@gmail.com
+* Site: https://www.wishfuldroplet.com/
+* LinkedIn: https://www.linkedin.com/in/admoraguilar/
 
 
-NOTES:
+##Notes:
 * This project is structured in a "package-based" way. For example for the scene called "MainScreen", everything that
   relates to that is contained in _TicTacToe/GameStates/MainScreen. For something that is shared across packages we
   put them in a folder one level above those packages called "_Common".
@@ -22,12 +22,13 @@ NOTES:
 * I also thank you for taking your valuable time to review this test.
 
 
+#Checklist
 Tic Tac Toe is a simple game played by 2 players on a square grid of tiles:
-✓ Each player has a different symbol (traditionally X or O, but here we have custom symbol images).
+* ✓ Each player has a different symbol (traditionally X or O, but here we have custom symbol images).
    * In TicTacToeUI component we could specify "markers/symbols" for players.
 
 
-✓ When the game start, each tile is empty.
+* ✓ When the game start, each tile is empty.
    * At start, the tiles are empty.
    * After a player wins and they decide to play again, the tiles are emptied.
    * This could be observed by inspecting the TicTacToeGame and TicTacToeUI component. Those two are separated
@@ -35,31 +36,31 @@ Tic Tac Toe is a simple game played by 2 players on a square grid of tiles:
 	 the game logic if we want to.
 
 
-✓ Players take turns selecting an empty tile and placing their symbol in that tile.
+* ✓ Players take turns selecting an empty tile and placing their symbol in that tile.
    * If a tile is also filled, a debug prompt is shown saying that the tile is filled.
 
 
-✓ The game is over when a single row, column, or diagonal is completely filled with one Player's symbol
+* ✓ The game is over when a single row, column, or diagonal is completely filled with one Player's symbol
    * In TicTacToeWinCombinationData you can specify what combinations shall a player need to do to win.
    * In _TicTacToe/GameStates/TicTacToeScreen/ScriptableObjects you could find win combination data for different
      board sizes, you could also add a custom combination on how to win the board.
 
 
-✓ The player should pick the grid size at the start of the game: 3x3 or 4x4.
+* ✓ The player should pick the grid size at the start of the game: 3x3 or 4x4.
    * This could be seen at the MainScreen scene where the player could choose between the two.
 
 
-✓ No AI is necessary, both players' turns can be controlled by the same mouse input.
+* ✓ No AI is necessary, both players' turns can be controlled by the same mouse input.
 
 
-✓ We also want to store, in memory, a history of every move played in the game. 
+* ✓ We also want to store, in memory, a history of every move played in the game. 
    We don't need to do anything with this data, just store it. 
    Choose the correct data structure for the job. 
    * On the TicTacToeScreen scences, there are GameObjects under Systems that has a TicTacToeGameAnalytics component.
    * There we track what kind of game is played, who won the game, and the moves the player did for a game.
 
    
-✓ The game doesn't need to look amazing, but it should look good, even with simple assets.
+* ✓ The game doesn't need to look amazing, but it should look good, even with simple assets.
    Most importantly, the user experience should be solid.
    * For the UX, there are states for a play:
      * Splash - shows a logo
